@@ -1,10 +1,10 @@
-# Stage 1: Build the Go application
+# Stage 1: Building Go Application
 FROM golang:1.20-alpine AS builder
 
-# Install dependencies (Alpine does not include build tools by default)
+# Installing dependencies
 RUN apk add --no-cache gcc g++ make libc-dev
 
-# Set the working directory inside the container
+# Setting up the working directory inside the container
 WORKDIR /app
 
 # Copy the Go module files (go.mod and go.sum) first to take advantage of Docker layer caching
