@@ -47,5 +47,6 @@ You should see the static index.html page served by the Go application.
 To stop the server, press Ctrl + C in the terminal where the server is running.
 That's it! You've successfully cloned and run the simple-go-webapp project locally.
 
+### Notes: If you want to dockerize the code then you can use dockerfile which is available here.
 
 ---
