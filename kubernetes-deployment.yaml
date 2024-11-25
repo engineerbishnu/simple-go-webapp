@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-go-webapp
+  labels:
+    app: simple-go-webapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simple-go-webapp
+  template:
+    metadata:
+      labels:
+        app: simple-go-webapp
+    spec:
+      containers:
+      - name: simple-go-webapp
+        image: <your-dockerhub-username>/simple-go-webapp:latest
+        ports:
+        - containerPort: 8080 
+        livenessProbe:
+          httpGet:
+            path: /        
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: / 
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "250m"
+            memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-go-webapp
+  labels:
+    app: simple-go-webapp
+spec:
+  type: LoadBalancer
+  selector:
+    app: simple-go-webapp
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
