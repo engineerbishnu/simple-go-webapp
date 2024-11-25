@@ -1,4 +1,4 @@
-# This Is Readme file for instructions.
+# This Is Readme file for instructions to read.
 ## How to Clone and Run the `simple-go-webapp` Project Locally?
 
 ## Prerequisites
