@@ -34,18 +34,18 @@ pipeline {
             }
         }
         stage('Deploy to Kubernetes') {
-            steps {
-                script {
-                    echo "Preparing Kubernetes deployment..."
-                    sh "sed -e 's|GO_APP_IMAGE_TAG|${GO_APP_IMAGE_TAG}|g' kubernetes-deployment.yaml > k8s-deployment-updated.yaml"
-                    kubeconfig(credentialsId: "${KUBE_CREDENTIALS_ID}") {
-                        echo "Deploying application to Kubernetes..."
-                        sh "kubectl apply -f k8s-deployment-updated.yaml"
-                    }
-                }
-            }
-        }
-    }
+#            steps {
+#                script {
+#                    echo "Preparing Kubernetes deployment..."
+#                    sh "sed -e 's|GO_APP_IMAGE_TAG|${GO_APP_IMAGE_TAG}|g' kubernetes-deployment.yaml > k8s-deployment-updated.yaml"
+#                    kubeconfig(credentialsId: "${KUBE_CREDENTIALS_ID}") {
+#                        echo "Deploying application to Kubernetes..."
+#                        sh "kubectl apply -f k8s-deployment-updated.yaml"
+#                    }
+#                }
+#            }
+#        }
+#    }
     post {
         success {
             echo "Deployment to Kubernetes completed successfully."
