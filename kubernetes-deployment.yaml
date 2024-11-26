@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-go-webapp
+  name: assessment-go-app
   labels:
-    app: simple-go-webapp
+    app: assessment-go-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: simple-go-webapp
+      app: assessment-go-app
   template:
     metadata:
       labels:
-        app: simple-go-webapp
+        app: assessment-go-app
     spec:
       containers:
-      - name: simple-go-webapp
-        image: <your-dockerhub-username>/simple-go-webapp:latest
+      - name: assesengineer442/asment-go-app
+        image: assessment-go-app:latest
         ports:
         - containerPort: 8080 
         livenessProbe:
@@ -42,13 +42,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: simple-go-webapp
+  name: assessment-go-app
   labels:
-    app: simple-go-webapp
+    app: assessment-go-app
 spec:
   type: LoadBalancer
   selector:
-    app: simple-go-webapp
+    app: assessment-go-app
   ports:
   - protocol: TCP
     port: 8080
