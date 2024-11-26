@@ -15,7 +15,7 @@ spec:
         app: assessment-go-app
     spec:
       containers:
-      - name: assesengineer442/asment-go-app
+      - name: engineer442/assessment-go-app
         image: assessment-go-app:latest
         ports:
         - containerPort: 8080 
